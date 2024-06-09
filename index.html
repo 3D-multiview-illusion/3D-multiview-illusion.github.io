@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Illusion3D">
+  <meta name="keywords" content="Illusion3D: 3D Multiview Illusion with 2D Diffusion Priors">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Illusion3D</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<!--   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+
+  </script> -->
+  <style>
+  .hr {width: 100%; height: 1px; margin: 48px 0; background-color: #d6dbdf;}
+  </style>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./assets/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./assets/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+
+  <!-- custom css file  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/twentytwenty.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop head">
+      <div class="columns is-centered">
+        <div class="column has-text-centered head">
+          <h1 class="title is-2 publication-title"> 
+            Illusion3D: 3D Multiview Illusion with 2D Diffusion Priors
+          </h1>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Anonymous Author(s)
+          </div>
+
+          
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Submission ID: 154</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- first row -->
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Cube</h2>
+      </div>
+
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/cube/video_1.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/cube/video_2.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/cube/video_0.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+      </div>
+      <p style="font-size:30px;">Result 3 Issue: Large Camera Shift</p>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Sphere</h2>
+      </div>
+
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/sphere/video_0.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/sphere/video_1.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/sphere/video_2.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/sphere/video_3.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/sphere/video_4.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/sphere/video_5.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/sphere/video_6.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/sphere/video_7.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/sphere/video_8.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+        
+      </div>
+      <p style="font-size:30px;">Result 1 Issue: Large Camera Shift</p>
+        <p style="font-size:30px;">Result 2 Issue: Negative Prompts</p>
+        <p style="font-size:30px;">Result 3 Issue: No Camera Shift</p>
+        <p style="font-size:30px;">Result 5 Issue: Shrink Camera View</p>
+        <p style="font-size:30px;">Result 6 Issue: Negative Prompts</p>
+        <p style="font-size:30px;">Result 7 Issue: No Camera Shift</p>
+        <p style="font-size:30px;">Result 9 Issue: Shrink Camera View</p>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">Reflective Object</h2>
+      </div>
+
+      <div id="results-carousel" class="carousel results-carousel">
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/reflective/video_0.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/reflective/video_1.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/reflective/video_2.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/reflective/video_3.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/reflective/video_4.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/reflective/video_5.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/reflective/video_6.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/reflective/video_7.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/reflective/video_8.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/reflective/video_9.mp4" type="video/mp4">
+            </video> 
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="video">
+            <video muted autoplay="autoplay" loop="loop" width="100%">
+              <source src="./assets/videos/reflective/video_10.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="is-centered has-text-centered">
+        <h2 class="title is-3">Multi-View Shape</h2>
+      
+        <video muted autoplay="autoplay" loop="loop" width="80%">
+          <source src="./assets/videos/shape/video_0.mp4" type="video/mp4">
+        </video>
+        <p style="font-size:30px;margin-bottom:30px;">Carrot, Cake, Banana, Pear</p>
+
+        <video muted autoplay="autoplay" loop="loop" width="80%">
+          <source src="./assets/videos/shape/video_1.mp4" type="video/mp4">
+        </video> 
+        <p style="font-size:30px;">Potato, Pizza, Orange, Mango</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+
+      <div class="is-centered has-text-centered">
+        <h2 class="title is-3">Failure Cases</h2>
+      
+        <div id="results-carousel" class="carousel results-carousel">
+
+          <div class="item">
+            <div class="image">
+              <img src="./assets/videos/failures/failure_00.jpg">
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <img src="./assets/videos/failures/failure_01.jpg">
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="image">
+              <img src="./assets/videos/failures/failure_02.jpg">
+            </div>
+          </div>
+
+        </div>
+        <p style="font-size:30px;margin-bottom:5px;">"A watercolor painting of (Red Panda, Wine and Cheese, Mouse)"</p>
+        <p style="font-size:30px;margin-bottom:30px;">Failure: Image Duplication</p>
+
+        <div id="results-carousel" class="carousel results-carousel">
+
+          <div class="item">
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos/failures/failure_2.mp4" type="video/mp4">
+              </video> 
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos/failures/failure_3.mp4" type="video/mp4">
+              </video> 
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos/failures/failure_4.mp4" type="video/mp4">
+              </video> 
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="video">
+              <video muted autoplay="autoplay" loop="loop" width="100%">
+                <source src="./assets/videos/shape/video_0.mp4" type="video/mp4">
+              </video> 
+            </div>
+          </div>
+
+        </div>
+        <p style="font-size:25px;margin-bottom:30px;">Failure 1 & 2: Bad Overall Prompts, Failure 3: Image Duplication, Failure 4: Excessive View Overlap</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <div class="columns is-centered"><p>
+            We thank Nerfies for its template.
+          </p></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+  <!-- custom js file  -->
+  <!-- <script defer src="./assets/js/fontawesome.all.min.js"></script> -->
+  <script src="./assets/js/bulma-carousel.min.js"></script>
+  <script src="./assets/js/bulma-slider.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/jquery.event.move.js"></script>
+  <script src="./assets/js/jquery.twentytwenty.js"></script>
+  <script src="./assets/js/select.js"></script>
+  <script>
+  $(function(){
+    $(".twentytwenty-container").twentytwenty();
+    // $(".twentytwenty-container", "#results-carousel").twentytwenty({default_offset_pct: 0.5, ratio: 0.5});
+  });
+  </script>
+  <script>
+    $(document).ready(function() {
+    var referenceVideo = $('#inputVideo2');
+    var specificTwentyTwentyContainer = $('#ablationTwentyTwentyContainer'); // targeting the specific container
+
+    function adjustTwentyTwentySize() {
+        var videoWidth = referenceVideo.width();
+        var videoHeight = referenceVideo.height();
+        // console.log("Setting TwentyTwenty size to:", videoWidth, videoHeight);
+        specificTwentyTwentyContainer.width(videoWidth);
+        specificTwentyTwentyContainer.height(videoHeight);
+        // console.log("Setting done! ", videoWidth, videoHeight);
+
+        // Adjust the size of the videos inside the TwentyTwenty container
+        specificTwentyTwentyContainer.find('video').each(function() {
+            $(this).width(videoWidth);
+            $(this).height(videoHeight);
+        });
+    }
+
+    // referenceVideo.on('loadedmetadata', adjustTwentyTwentySize);
+    referenceVideo.on('loadedmetadata', function() {
+      // console.log("Video metadata loaded");
+      adjustTwentyTwentySize();
+    });
+    $(window).resize(adjustTwentyTwentySize);
+    });
+  </script>
+  <script>
+    // function checkSliderValue() {
+    //     var slider = document.getElementById('dataSlider');
+    //     var edvrButton = document.getElementById('edvrButton');
+    //     var sliderValue = slider.value;
+
+    //     // Update the display of slider value
+    //     document.getElementById('sliderValue').textContent = sliderValue;
+
+    //     // Enable or disable the EDVR button based on slider value
+    //     if (sliderValue > 2) {
+    //         edvrButton.disabled = true;
+    //     } else {
+    //         edvrButton.disabled = false;
+    //     }
+    //     console.log("Slider value:", sliderValue);
+    //     console.log("EDVR button disabled:", edvrButton.disabled);
+    // }
+    function checkSliderValue() {
+        var slider = document.getElementById('dataSlider');
+        var edvrButton = document.getElementById('edvrButton');
+        var sliderValue = slider.value;
+
+        // Update the display of slider value
+        document.getElementById('sliderValue').textContent = sliderValue;
+
+        // Enable or disable the EDVR button based on slider value
+        edvrButton.disabled = sliderValue > 2;
+    }
+
+    // Call the function initially to set the correct state of the button
+    checkSliderValue();
+
+  </script>
+</body>
+</html>
