@@ -292,7 +292,7 @@
             We illustrate the process of generating a 3D multiview illusion from a cube with three varying interpretations from different viewpoints (V<sub>1</sub>, V<sub>2</sub>, and V<sub>3</sub>) given text prompts (y<sub>1</sub>, y<sub>2</sub>, and y<sub>3</sub>). 
             We first render the cube from the target viewpoints, shifting the camera with added Gaussian noise to ensure a seamless transition between views and use the multi-resolution texture field T to obtain the images (I<sub>1</sub>, I<sub>2</sub>, and I<sub>3</sub>). 
             Here, as the 3D shape is known, we aim to optimize the parameters of the texture field of <a href="https://daveredrum.github.io/SceneTex/" target="_blank">SceneTex</a>.
-            We optimize the generation of these viewpoints by leveraging the text-to-image diffusion model guided by the text prompts ((y<sub>1</sub>, y<sub>2</sub>, and y<sub>3</sub>)). 
+            We optimize the generation of these viewpoints by leveraging the text-to-image diffusion model guided by the text prompts (y<sub>1</sub>, y<sub>2</sub>, and y<sub>3</sub>). 
             To avoid unnatural, saturated colors, we apply <a href="https://ml.cs.tsinghua.edu.cn/prolificdreamer/" target="_blank">Variational Score Distillation</a> loss.
             To improve the quality of the illusion across different views, we introduce a gradient mask when updating the LoRA model.
             We follow the same setting for the sphere and scene with reflective surfaces.
@@ -336,6 +336,12 @@
         <div class="item item-mask">
           <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/reflective/video_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/reflective/video_10.mp4"
                     type="video/mp4">
           </video>
         </div>
