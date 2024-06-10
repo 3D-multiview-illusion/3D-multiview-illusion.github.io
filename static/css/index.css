@@ -125,6 +125,7 @@ body {
 
 .results-carousel video {
   margin: 0;
+  /* height: 100%; */
 }
 
 
