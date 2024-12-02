@@ -31,55 +31,83 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/real_inf_0_6000.png">
-
+  <link rel="icon" href="./static/images/icon.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <style>
+    h2.title.is-3 {
+  margin-top: 10px; /* Adjust as needed */
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+    .parent-container {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      height: 50vh; /* Full viewport height */
+      margin: 0; /* Remove any default margin */
+      padding: 0; /* Remove any default padding */
+    }
+    .video-container {
+      width: 100%;
+      max-width: 1800px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    figure {
+      width: 100%; /* Set the width to 100% of the container */
+      max-width: 1200px; /* Optional: Set a maximum width */
+      margin: 0 auto; /* Center the figure */
+    }
+
+    figure img {
+      width: 100%; /* Set the width to 100% of the figure */
+      height: auto; /* Maintain the aspect ratio */
+    }
+
+  </style>
+
 </head>
 <body>
 
 
 
-<section class="hero">
+<section id="top" class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-3 publication-title">Illusion3D: 3D Multiview Illusion with 2D Diffusion Priors</h1>
-          <!-- <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
-            <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
-            <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
-            </span>
-            <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
-            </span>
-          </div> -->
-
-          <!-- <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
-          </div> -->
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              Anonymous Authors
+              <a href="https://yuefeng21.github.io/">Yue Feng</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a>Vaibhav Sanjay</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a>Spencer Lutz</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://songweige.github.io/">Songwei Ge</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://badouralbahar.github.io/">Badour AlBahar</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://jbhuang0604.github.io/">Jia-Bin Huang</a><sup>1</sup>,</span>
           </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Maryland, College Park</span>
+            <span class="author-block"><sup>2</sup>Kuwait University</span>
+          </div>
+
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
@@ -103,7 +131,25 @@
                   <span>Code</span>
                   </a>
               </span>
+              <span class="link-block">
+                <a href="#cube"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Main</span>
+                </a>
+              </span>
 
+              <span class="link-block">
+                <a href="./static/ablation.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Ablation</span>
+                </a>
+              </span>
             </div>
 
           </div>
@@ -112,138 +158,429 @@
     </div>
   </div>
 </section>
+
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <h2 class="subtitle has-text-centered">
       We use 2D text-to-image generation model (diffusion priors) to create 3D multiview illusion art.
     </h2>
     <div class="hero-body" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/sphere/woman_ours_6000_compressed.mp4"
-                type="video/mp4">
-      </video>
-
     </div>
   </div>
 </section>
-
-
 <section class="hero teaser">
-  <div class="container is-max-desktop" style="width: 50%;">
+  <div class="container is-max-desktop" style="width: 30%;">
     <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">Cube</h2>
+      <h2 class="title is-3" style="margin-top: 50px; margin-bottom: 60px;">Real World Examples</Object></h2>
     </div>
     <div class="hero-body" style="display: flex; justify-content: center; align-items: center;">
-      <video id="teaser1" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/cube/soldier_ours_8000_24.mp4"
-                type="video/mp4">
-      </video>
-      <video id="teaser2" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/cube/garden_ours_8000_compressed.mp4"
-                type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop" style="width: 50%;">
-    <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">Sphere</h2>
-    </div>
-    <div class="hero-body" style="display: flex; justify-content: center; align-items: center;">
-      <video id="teaser1" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/sphere/woman_ours_6000_compressed.mp4"
-                type="video/mp4">
-      </video>
-      <video id="teaser2" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/sphere/vases_ours_7000_c.mp4"
-                type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop" style="width: 50%;">
-    <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">Reflective Cylinder</h2>
-    </div>
-    <div class="hero-body" style="display: flex; justify-content: center; align-items: center;">
-      <video id="teaser1" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/reflective/video_0.mp4"
-                type="video/mp4">
-      </video>
-      <video id="teaser2" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/reflective/video_1.mp4"
-                type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop" style="width: 50%;">
-    <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">Reflective Mirror</h2>
-    </div>
-    <div class="hero-body" style="display: flex; justify-content: center; align-items: center;">
-      <video id="teaser1" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/reflective/video_8.mp4"
-                type="video/mp4">
-      </video>
-      <video id="teaser2" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/reflective/video_9.mp4"
-                type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
-
-<section class="hero teaser">
-  <div class="container is-max-desktop" style="width: 50%;">
-    <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">Reflective Cylinders</h2>
-    </div>
-    <div class="hero-body" style="display: flex; justify-content: center; align-items: center;">
-      <video id="teaser1" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/reflective/castle.mov"
-                type="video/mp4">
-      </video>
-      <video id="teaser2" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/reflective/village.mov"
-                type="video/mp4">
-      </video>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero teaser">
-  <div class="container is-max-desktop" style="width: 50%;">
-    <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">Real World Fabrication</h2>
-    </div>
-    <div class="hero-body" style="display: flex; justify-content: center; align-items: center;">
-      <video id="teaser1" autoplay muted loop playsinline height="100%">
+      <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
         <source src="./static/videos/reflective/real_clownfish.MOV"
                 type="video/mp4">
       </video>
-
-    </div>
-
-            <!-- New row of videos -->
-            <div class="hero-body" style="display: flex; justify-content: center; align-items: center;">
-
-              <video id="teaser4" autoplay muted loop playsinline height="100%">
-                <source src="./static/videos/reflective/real_submarine.MOV"
-                        type="video/mp4">
-              </video>
-            </div>
+      <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/reflective/real_waldo.mp4"
+                type="video/mp4">
+      </video>
+      <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+        <source src="./static/videos/reflective/real_submarine.mov"
+                type="video/mp4">
+      </video>
   </div>
 </section>
+
+
+<section id="cube" class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3" style="margin-top: 30px; margin-bottom: 60px;">Cube</h2>
+    </div>
+    <div class="parent-container">
+      <div class="video-container">
+      <div id="results-carousel1" class="carousel results-carousel">
+
+
+        <div class="item">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_a_lithograph_of_a_garden_prompt_2_a_watercolor_painting_of_a_bus_prompt_3_a_watercolor_painting_of_a_bonfire_cube.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_an_oil_painting_of_a_boat_prompt_2_an_oil_painting_of_a_snowy_mountain_village_prompt_3_an_oil_painting_of_a_giraffe_cube.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_a_watercolor_painting_of_an_elephant_prompt_2_a_watercolor_painting_of_Abraham_Lincoln_prompt_3_a_watercolor_painting_of_a_houseplant_cube.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_a_drawing_of_a_soldier_prompt_2_a_drawing_of_wine_and_cheese_prompt_3_a_drawing_of_a_teddy_bear.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_a_lithograph_of_a_ship_prompt_2_a_lithograph_of_a_houseplant_prompt_3_a_lithograph_of_a_sculpture_garden_cube.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_a_lithograph_of_flowers_prompt_2_a_lithograph_of_a_campfire_prompt_3_a_lithograph_of_Michael_Jackson.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_a_lithograph_of_kitchenware_prompt_2_a_lithograph_of_a_skull_prompt_3_a_lithograph_of_ancient_ruins_cube.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_a_watercolor_painting_of_a_museum_prompt_2_a_watercolor_painting_of_a_cloud_prompt_3_a_watercolor_painting_of_a_forest_cube.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_a_lithograph_of_Abraham_Lincoln_prompt_2_a_lithograph_of_a_landscape_prompt_3_a_lithograph_of_a_castle_cube.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">Sphere</h2>
+    </div>
+    <div class="parent-container">
+      <div class="video-container">
+      <div id="results-carousel2s" class="carousel results-carousel">
+
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_an_oil_painting_of_wine_and_cheese_prompt_2_an_oil_painting_of_a_library_prompt_3_an_oil_painting_of_a_horse.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_an_oil_painting_of_a_woman_staring_out_a_window_prompt_2_an_oil_painting_of_a_piano_prompt_3_an_oil_painting_of_people_at_a_campfire.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_an_oil_painting_of_a_zebra_prompt_2_an_oil_painting_of_a_campfire_prompt_3_an_oil_painting_of_a_monkey.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_a_painting_of_a_woman_staring_out_a_window_prompt_2_a_painting_of_a_horse_prompt_3_a_painting_of_a_forest.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_a_painting_of_a_young_lady_prompt_2_a_painting_of_a_snowy_mountain_village_prompt_3_a_painting_of_a_train.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_a_lithograph_of_a_garden_prompt_2_a_watercolor_painting_of_a_bus_prompt_3_a_watercolor_painting_of_a_bonfire.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_an_oil_painting_of_a_boat_prompt_2_an_oil_painting_of_a_snowy_mountain_village_prompt_3_an_oil_painting_of_a_giraffe.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_a_lithograph_of_a_ship_prompt_2_a_lithograph_of_a_houseplant_prompt_3_a_lithograph_of_a_sculpture_garden.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_a_lithograph_of_Abraham_Lincoln_prompt_2_a_lithograph_of_a_landscape_prompt_3_a_lithograph_of_a_castle.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+ <section class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">Reflective Cylinders</h2>
+    </div>
+    <div class="parent-container">
+      <div class="video-container">
+      <div id="results-carousel3" class="carousel results-carousel">
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_fishes_prompt_2_an_oil_painting_of_boots_prompt_3_an_oil_painting_of_underwater.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_a_forest_prompt_2_an_oil_painting_of_a_zebra_prompt_3_an_oil_painting_of_a_campfire.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_a_rabbit_prompt_2_an_oil_painting_of_a_city_prompt_3_an_oil_painting_of_wine_and_cheese.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/2views_with_text/an_oil_painting_of_a_campfire_an_oil_painting_of_flower-11-02_20-59-05_real_inf_text_1999.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_a_monkey_prompt_2_an_oil_painting_of_a_vampire_prompt_3_an_oil_painting_of_a_mountain.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_a_violin_prompt_2_an_oil_painting_of_a_penguin_prompt_3_an_oil_painting_of_a_lightning.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/video_0.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/video_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/video_5.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_a_forest_prompt_2_an_oil_painting_of_a_waterfall.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_a_gemstone_prompt_2_an_oil_painting_of_a_maze.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_a_rose_prompt_2_an_oil_painting_of_a_garden.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+
+
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">Reflective Mirrors</h2>
+    </div>
+    <div class="parent-container">
+      <div class="video-container">
+      <div id="results-carousel4" class="carousel results-carousel">
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_heaven_prompt_2_an_oil_painting_of_jail.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_a_waterfall_prompt_2_an_oil_painting_of_a_forest.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_a_forest_fire_prompt_2_an_oil_painting_of_a_table.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_a_watercolor_painting_of_an_earthquake_prompt_2_a_watercolor_painting_of_a_museum.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_a_penguin_prompt_2_an_oil_painting_of_a_polar_bear_prompt_3_an_oil_painting_of_a_snowy_mountain.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_a_campfire_prompt_2_an_oil_painting_of_flower_prompt_3_an_oil_painting_of_forest.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_woman_staring_out_a_window_prompt_2_an_oil_painting_of_a_piano_prompt_3_an_oil_painting_of_people_at_a_campfire.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_ancient_ruins_prompt_2_an_oil_painting_of_a_cup_prompt_3_an_oil_painting_of_a_museum.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_a_coral_reef_prompt_2_an_oil_painting_of_a_clownfish.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/video_8.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/video_9.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+
+
+
+
+
+
+
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  </div>
+</section>
+
+
+<section id="3D" class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">3D Shape Illusion
+        <span style="font-size: 20px;"><a href="#top">&uarr; <span style="font-size: 15px;">back to top</span></a></span>
+      </h2>
+    </div>
+    <div class="parent-container">
+      <div class="video-container">
+      <div id="results-carousel5" class="carousel results-carousel">
+
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/3D/campfire - REVERSE - Videobolt.net.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/3D/house - REVERSE - Videobolt.net.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/3D/snowman - REVERSE - Videobolt.net.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/3D/tent - REVERSE - Videobolt.net.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/3D/sleigh - REVERSE - Videobolt.net.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/3D/barrel - REVERSE - Videobolt.net.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/3D/tissue - REVERSE - Videobolt.net.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -253,18 +590,13 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-           
-          Automatically generating multiview illusions is a compelling challenge, where a single piece of visual content can present diverse interpretations from various perspectives.
-
-          Existing methods like shadow art and wire art create interesting 3D illusions but are limited to simple images (i.e., figure-ground or line drawing), restricting their expressiveness in artistic and practical applications. 
-          Diffusion-based illusion generation methods can generate more intricate designs, while they still remain confined to 2D images.
-
-          In this work, we present a novel approach for creating intricate 3D multiview illusions guided by user-provided text prompts.
-
-          Our method leverages pre-trained diffusion models to optimize the textures of various 3D shapes through differentiable rendering, producing different interpretations when viewed from multiple angles.
-
-          We introduce several techniques and design choices that improve the quality of the 3D multiview illusions. 
-          We demonstrate the effectiveness of our approach through various examples and 3D forms, showcasing its potential for different artistic expressions and practical applications.
+            Automatically generating multiview illusions is a compelling challenge, where a single piece of visual content can present distinct interpretations from various perspectives.
+            Existing methods like shadow art and wire art create interesting 3D illusions but are limited to simple images (\ie, figure-ground or line drawing), restricting their expressiveness in artistic and practical applications. 
+            Diffusion-based illusion generation methods can generate more intricate designs but are confined to 2D images.
+            In this work, we present a simple approach for creating 3D multiview illusions guided by user-provided text prompts or images.
+            Our method leverages a pre-trained text-to-image diffusion model to optimize the textures of various 3D shapes through differentiable rendering, producing different interpretations when viewed from multiple angles.
+            We develop several techniques that improve the quality of the 3D multiview illusions. Our approach expands the scope of multiview illusion by leveraging the power of diffusion models to generate detailed 3D illusions. 
+            We demonstrate the effectiveness of our approach through various examples and 3D forms and validate the effectiveness of our design choices. 
           </p>
         </div>
       </div>
@@ -289,13 +621,15 @@
         <figure>
           <img src="./static/images/overview.png" alt="Description of the image">
           <figcaption style="text-align: justify;">      
-            We illustrate the process of generating a 3D multiview illusion from a cube with three varying interpretations from different viewpoints (V<sub>1</sub>, V<sub>2</sub>, and V<sub>3</sub>) given text prompts (y<sub>1</sub>, y<sub>2</sub>, and y<sub>3</sub>). 
-            We first render the cube from the target viewpoints, shifting the camera with added Gaussian noise to ensure a seamless transition between views and use the multi-resolution texture field T to obtain the images (I<sub>1</sub>, I<sub>2</sub>, and I<sub>3</sub>). 
-            Here, as the 3D shape is known, we aim to optimize the parameters of the texture field of <a href="https://daveredrum.github.io/SceneTex/" target="_blank">SceneTex</a>.
-            We optimize the generation of these viewpoints by leveraging the text-to-image diffusion model guided by the text prompts (y<sub>1</sub>, y<sub>2</sub>, and y<sub>3</sub>). 
-            To avoid unnatural, saturated colors, we apply <a href="https://ml.cs.tsinghua.edu.cn/prolificdreamer/" target="_blank">Variational Score Distillation</a> loss.
-            To improve the quality of the illusion across different views, we introduce a gradient mask when updating the LoRA model.
-            We follow the same setting for the sphere and scene with reflective surfaces.
+
+            We illustrate the process of generating a 3D multiview illusion from a cube with three varying interpretations from different viewpoints (V<sub>1</sub>, V<sub>2</sub>, and V<sub>3</sub>) guided by text prompts (y<sub>1</sub>, y<sub>2</sub>, and y<sub>3</sub>). 
+            First, we render the cube from the target viewpoints V<sub>i</sub> applying scheduled camera jitter C(k) and scheduled render size R(k) with respect to the gradient flow time k. 
+            Camera jitter improves generation quality and render size scheduling helps reduce the duplicate pattern issue issue. 
+            We then utilize the multi-resolution texture field T to obtain the images (I<sub>1</sub>, I<sub>2</sub>, and I<sub>3</sub>) at resolution R(k) in [512, 1024].
+            To increase resolution during training, we extract a random patch P<sub>i</sub> of size 512 <td>&times;</td> 512  from each rendered image I<sub>i</sub>, which is then fed into a pre-trained VAE encoder.
+            Given the 3D shape, we aim to optimize the parameters of the texture field. 
+            The generation of these viewpoints is optimized by leveraging a text-to-image diffusion model guided by the text prompts (y<sub>1</sub>, y<sub>2</sub>, and y<sub>3</sub>). 
+            To avoid unnatural, saturated colors, we apply Variational Score Distillation (VSD) and LoRA model. We apply the same settings for spheres and scenes with reflective surfaces.
           </figcaption>
         </figure>
       </div>
@@ -307,63 +641,13 @@
   </div>
 </section>
 
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">More examples</h2>
-    </div>
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/reflective/video_2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/reflective/video_3.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/reflective/video_4.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/reflective/video_5.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/reflective/video_10.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- <section class="section" id="BibTeX">
+<section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{feng2021illusion3d,
 }</code></pre>
   </div>
-</section> -->
+</section>
 
 
 <footer class="footer">
@@ -373,7 +657,7 @@
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/yuefeng21" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -394,6 +678,10 @@
     </div>
   </div>
 </footer>
+
+
+
+
 
 </body>
 </html>
