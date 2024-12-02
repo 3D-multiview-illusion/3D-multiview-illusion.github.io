@@ -117,9 +117,9 @@ def extract_prompts(file_name):
     return prompt_1, prompt_2, prompt_3
 if __name__ == "__main__":
     # Set input and output file paths
-    input_folder = "/Users/fengyue/Documents/GitHub/3D-multiview-illusion.github.io/static/videos/ablation/8prompts/input"
+    input_folder = "/Users/fengyue/Documents/GitHub/3D-multiview-illusion.github.io/static/videos/2views"
     # output_folder = "out"
-    output_folder = "/Users/fengyue/Documents/GitHub/3D-multiview-illusion.github.io/static/videos/ablation/8prompts/out"
+    output_folder = "/Users/fengyue/Documents/GitHub/3D-multiview-illusion.github.io/static/videos/2views_captioned"
     # find file name inclues "elephant" in the folder using glob    
     # file_names = [f for f in os.listdir(input_folder) if "512" in f]
     # glob all files in the folder
@@ -131,23 +131,23 @@ if __name__ == "__main__":
         # read prompts from filename
         # prompt_1_a_watercolor painingt_of_a_garden_prompt_2_a_watercolor_painting_of_a_bus_prompt_3_a_watercolor_painting_of_a_bonfire
         # prompt_1_a_watercolor_painting_of_a_museum_prompt_2_a_watercolor_painting_of_a_cloud_prompt_3_a_watercolor_painting_of_a_forest_cube
-        # prompt_1, prompt_2, prompt_3 = extract_prompts(file_name)
-        # print(prompt_1, prompt_2, prompt_3)
-        prompt_1 = "an oil painting of marimba"
-        prompt_2 = "an oil painting of Elvis"
-        prompt_3 = "an oil painting of a flower"
-        prompt_4 = "an oil painting of a truck"
-        prompt_5 = "an oil painting of a desert"
-        prompt_6 = "an oil painting of a violin"
-        prompt_7 = "an oil painting of a truck"
-        prompt_8 = "an oil painting of a kitchenware"
+        prompt_1, prompt_2, prompt_3 = extract_prompts(file_name)
+        print(prompt_1, prompt_2, prompt_3)
+        # prompt_1 = "an oil painting of marimba"
+        # prompt_2 = "an oil painting of Elvis"
+        # prompt_3 = "an oil painting of a flower"
+        # prompt_4 = "an oil painting of a truck"
+        # prompt_5 = "an oil painting of a desert"
+        # prompt_6 = "an oil painting of a violin"
+        # prompt_7 = "an oil painting of a truck"
+        # prompt_8 = "an oil painting of a kitchenware"
 
 
 
 
 
-        # text_times = [(prompt_1, (0, 4)), (prompt_2, (8, 12)), (prompt_3, (16, 20)), (prompt_1, (24, 28))]
-        text_times = [(prompt_1, (0, 4)), (prompt_2, (8, 12)), (prompt_3, (16, 20)), (prompt_4, (24, 28)), (prompt_5, (32, 36)), (prompt_6, (40, 44)), (prompt_7, (48, 52)), (prompt_8, (56, 60)), (prompt_1, (64, 68))]
+        text_times = [(prompt_1, (0, 4)), (prompt_2, (8, 12)), (prompt_3, (16, 20)), (prompt_1, (24, 28))]
+        # text_times = [(prompt_1, (0, 4)), (prompt_2, (8, 12)), (prompt_3, (16, 20)), (prompt_4, (24, 28)), (prompt_5, (32, 36)), (prompt_6, (40, 44)), (prompt_7, (48, 52)), (prompt_8, (56, 60)), (prompt_1, (64, 68))]
         # text_times = [(prompt_1, (0, 4)), (prompt_2, (8, 12)), (prompt_3, (16, 24))]
         # text_times = [(prompt_1, (0, 4)), (prompt_2, (8, 12)), (prompt_1, (16, 20))]
         # text_times = [(prompt_1, (0, 4)), (prompt_2, (8, 16))]

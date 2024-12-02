@@ -111,7 +111,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="./static/paper/compressed_Illusion3D__3D_multiview_illusion_with_2D_diffusion_priors_Arxiv__CVPR_ (1).pdf"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -119,8 +119,16 @@
                   </span>
                   <span>Paper</span>
                 </a>
-              </span>
-              
+              </span> -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>              
               <!-- Code Link. -->
               <span class="link-block">
                 <a href="https://3d-multiview-illusion.github.io/"
@@ -135,7 +143,7 @@
                 <a href="#cube"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                      <i class="far fa-images"></i>
                   </span>
                   <span>Main</span>
                 </a>
@@ -145,7 +153,7 @@
                 <a href="./static/ablation.html"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
+                      <i class="far fa-images"></i>
                   </span>
                   <span>Ablation</span>
                 </a>
@@ -168,28 +176,47 @@
     </div>
   </div>
 </section>
-<section class="hero teaser">
-  <div class="container is-max-desktop" style="width: 30%;">
+
+<section id="cube" class="hero teaser">
+  <div class="hero-body">
     <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3" style="margin-top: 50px; margin-bottom: 60px;">Real World Examples</Object></h2>
+      <h2 class="title is-3" style="margin-top: 0px; margin-bottom: 0px;">Real Examples</h2>
     </div>
-    <div class="hero-body" style="display: flex; justify-content: center; align-items: center;">
-      <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-        <source src="./static/videos/reflective/real_clownfish.MOV"
-                type="video/mp4">
-      </video>
-      <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-        <source src="./static/videos/reflective/real_waldo.mp4"
-                type="video/mp4">
-      </video>
-      <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-        <source src="./static/videos/reflective/real_submarine.mov"
-                type="video/mp4">
-      </video>
+    <div class="parent-container">
+      <div class="video-container">
+      <div id="results-carousel1" class="carousel results-carousel">
+
+
+        <div class="item">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/reflective/real_clownfish.MOV"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/reflective/real_waldo.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/reflective/copy_EC484C7A-8064-490B-9F8E-48C76FDBB6D7.MOV"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/reflective/copy_62FE3BEF-4F04-4268-B796-111F4FFE9FF3.mov"
+                    type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+      </div>
+    </div>
   </div>
 </section>
-
-
 <section id="cube" class="hero teaser">
   <div class="hero-body">
     <div class="columns is-centered has-text-centered">
@@ -208,7 +235,7 @@
         </div>
         <div class="item item-blueshirt">
           <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_an_oil_painting_of_a_boat_prompt_2_an_oil_painting_of_a_snowy_mountain_village_prompt_3_an_oil_painting_of_a_giraffe_cube.mp4"
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_an_oil_painting_of_a_boat_prompt_2_oil_painting,_snowy_mountain_village_prompt_3_an_oil_painting_of_a_giraffe_cube.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -279,7 +306,7 @@
         </div>
         <div class="item item-blueshirt">
           <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_an_oil_painting_of_a_woman_staring_out_a_window_prompt_2_an_oil_painting_of_a_piano_prompt_3_an_oil_painting_of_people_at_a_campfire.mp4"
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_oil_painting,_woman_staring_out_a_window_prompt_2_an_oil_painting_of_a_piano_prompt_3_an_oil_painting_of_people_at_a_campfire.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -291,7 +318,7 @@
         </div>
         <div class="item item-mask">
           <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_a_painting_of_a_woman_staring_out_a_window_prompt_2_a_painting_of_a_horse_prompt_3_a_painting_of_a_forest.mp4"
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_painting,_woman_staring_out_a_window_prompt_2_a_painting_of_a_horse_prompt_3_a_painting_of_a_forest.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -309,7 +336,7 @@
         </div>
         <div class="item item-mask">
           <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_an_oil_painting_of_a_boat_prompt_2_an_oil_painting_of_a_snowy_mountain_village_prompt_3_an_oil_painting_of_a_giraffe.mp4"
+            <source src="./static/videos/ours_cube_and_sphere_with_text/prompt_1_an_oil_painting_of_a_boat_prompt_2_oil_painting,_snowy_mountain_village_prompt_3_an_oil_painting_of_a_giraffe.mp4"
                     type="video/mp4">
           </video>
         </div>
