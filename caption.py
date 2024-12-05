@@ -1,7 +1,8 @@
 import os
 import cv2
 
-def add_text_to_video(input_file, output_folder, text_times, font=cv2.FONT_HERSHEY_SIMPLEX, font_scale=1.25, color=(0, 0, 0), thickness=4, bg_color=(255, 255, 255), padding=20):
+# def add_text_to_video(input_file, output_folder, text_times, font=cv2.FONT_HERSHEY_SIMPLEX, font_scale=1.25, color=(0, 0, 0), thickness=4, bg_color=(255, 255, 255), padding=20):
+def add_text_to_video(input_file, output_folder, text_times, font=cv2.FONT_HERSHEY_SIMPLEX, font_scale=1.5, color=(0, 0, 0), thickness=4, bg_color=(255, 255, 255), padding=20):
 # def add_text_to_video(input_file, output_folder, text_times, font=cv2.FONT_HERSHEY_SIMPLEX, font_scale=1.5, color=(0, 0, 0), thickness=6, bg_color=(255, 255, 255), padding=20):
 # def add_text_to_video(input_file, output_folder, text_times, font=cv2.FONT_HERSHEY_SIMPLEX, font_scale=0.75, color=(0, 0, 0), thickness=3, bg_color=(255, 255, 255), padding=20):
 # def add_text_to_video(input_file, output_folder, text_times, font=cv2.FONT_HERSHEY_COMPLEX, font_scale=1.5, color=(0, 0, 0), thickness=4, padding=20):
