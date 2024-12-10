@@ -39,11 +39,33 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
   <style>
-    h2.title.is-3 {
-  margin-top: 10px; /* Adjust as needed */
-  margin-bottom: 10px; /* Adjust as needed */
-}
 
+    h2.title.is-3 {
+      margin-top: 20px; /* Adjust as needed */
+      margin-bottom: 20px; /* Adjust as needed */
+    }
+
+
+    .hero-body {
+      display: flex;
+      padding-top: 0px; /* Adjust as needed */
+      padding-bottom: 0px; /* Adjust as needed */
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .video-container {
+      margin-top: 20px; /* Adjust as needed */
+      align-items: center;
+    }
+
+    .video-container {
+      width: 100%;
+      max-width: 1800px;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
     .parent-container {
       display: flex;
       justify-content: center; /* Center horizontally */
@@ -51,12 +73,6 @@
       height: 50vh; /* Full viewport height */
       margin: 0; /* Remove any default margin */
       padding: 0; /* Remove any default padding */
-    }
-    .video-container {
-      width: 100%;
-      max-width: 1800px;
-      border-radius: 8px;
-      overflow: hidden;
     }
 
     video {
@@ -74,7 +90,7 @@
       width: 100%; /* Set the width to 100% of the figure */
       height: auto; /* Maintain the aspect ratio */
     }
-
+    
   </style>
 
 </head>
@@ -87,20 +103,22 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-3 publication-title">Illusion3D: 3D Multiview Illusion with 2D Diffusion Priors</h1>
+          <!-- <h1 class="title is-3 publication-title"><strong>Illusion3D:</strong> 3D Multiview Illusion with 2D Diffusion Priors</h1> -->
+          <h1 class="title is-1 publication-title" style="font-size: 32pt;"><span style="font-weight: bolder;">Illusion3D</span>
+            <br><span style="font-weight:normal">3D Multiview Illusion with 2D Diffusion Priors</span></h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://yuefeng21.github.io/">Yue Feng</a><sup>1</sup>,</span>
+              <a href="https://yuefeng21.github.io/">Yue Feng</a><sup>1</sup></span>
             <span class="author-block">
-              <a>Vaibhav Sanjay</a><sup>1</sup>,</span>
+              <a>Vaibhav Sanjay</a><sup>1</sup></span>
             <span class="author-block">
-              <a>Spencer Lutz</a><sup>1</sup>,</span>
+              <a>Spencer Lutz</a><sup>1</sup></span>
             <span class="author-block">
-              <a href="https://songweige.github.io/">Songwei Ge</a><sup>1</sup>,</span>
+              <a href="https://songweige.github.io/">Songwei Ge</a><sup>1</sup></span>
             <span class="author-block">
-              <a href="https://badouralbahar.github.io/">Badour AlBahar</a><sup>2</sup>,</span>
+              <a href="https://badouralbahar.github.io/">Badour AlBahar</a><sup>2</sup></span>
             <span class="author-block">
-              <a href="https://jbhuang0604.github.io/">Jia-Bin Huang</a><sup>1</sup>,</span>
+              <a href="https://jbhuang0604.github.io/">Jia-Bin Huang</a><sup>1</sup></span>
           </div>
 
           <div class="is-size-5 publication-authors">
@@ -160,59 +178,108 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <h2 class="subtitle has-text-centered">
-      We use 2D text-to-image generation model (diffusion priors) to create 3D multiview illusion art.
+      We create 3D multiview illusion art using 2D text-to-image generation model.
     </h2>
     <div class="hero-body" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
     </div>
   </div>
 </section>
 
-<section id="cube" class="hero teaser">
+
+<section id="real" class="hero teaser">
   <div class="hero-body">
     <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3" style="margin-top: 0px; margin-bottom: 0px;">Real Examples</h2>
+      <h2 class="title is-3" style="margin-top: 0px; margin-bottom: 20px;">Real Examples</h2>
     </div>
-    <div class="parent-container">
+    
+    <!-- <div class="container"> -->
+      <!-- <div class="parent-container"> -->
+        <div class="video-container">
+
+      <div id="demo-carousel" class="carousel results-carousel">
+          <div class="item">
+            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/reflective/copy_BC52149A-08D7-4765-B143-13B977222525.MOV"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-blueshirt">
+            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/reflective/copy_8C1B51F5-0A58-4A61-989E-1129022DA153.MOV"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-shiba">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/reflective/copy_EC484C7A-8064-490B-9F8E-48C76FDBB6D7.MOV"
+                      type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-mask">
+            <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/reflective/copy_62FE3BEF-4F04-4268-B796-111F4FFE9FF3.mov"
+                      type="video/mp4">
+            </video>
+          </div>
+      <!-- </div> -->
+  </div>
+  </div>
+  </div>
+</section>
+
+
+
+
+<section id="3D" class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3" style="margin-top: 30px; margin-bottom: 0px;">3D Shape Illusion
+        <span style="font-size: 20px;"></span>
+      </h2>
+    </div>
       <div class="video-container">
-      <div id="results-carousel1" class="carousel results-carousel">
+      <div id="results-carousel5" class="carousel results-carousel">
 
-
-        <div class="item">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/reflective/real_clownfish.MOV"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/reflective/real_waldo.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
         <div class="item item-shiba">
           <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/reflective/copy_EC484C7A-8064-490B-9F8E-48C76FDBB6D7.MOV"
+            <source src="./static/videos/3D/campfire-butterfly.mp4"
                     type="video/mp4">
           </video>
         </div>
         <div class="item item-mask">
           <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/reflective/copy_62FE3BEF-4F04-4268-B796-111F4FFE9FF3.mov"
+            <source src="./static/videos/3D/house-clocktower.mp4"
                     type="video/mp4">
           </video>
         </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/3D/barrel-rocket.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/3D/tent-campfire.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/3D/tissue-candy.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+      </div>
 
-      </div>
-      </div>
     </div>
   </div>
 </section>
-<section id="cube" class="hero teaser">
+<section id="cube2" class="hero teaser">
   <div class="hero-body">
     <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3" style="margin-top: 30px; margin-bottom: 60px;">Cube</h2>
+      <h2 class="title is-3" style="margin-top: 0px; margin-bottom: 0px;">Cube</h2>
     </div>
-    <div class="parent-container">
       <div class="video-container">
       <div id="results-carousel1" class="carousel results-carousel">
 
@@ -273,7 +340,6 @@
           </video>
         </div>
       </div>
-      </div>
     </div>
   </div>
 </section>
@@ -281,9 +347,8 @@
 <section class="hero teaser">
   <div class="hero-body">
     <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">Sphere</h2>
+      <h2 class="title is-3" style="margin-top: 0px; margin-bottom: 0px;">Sphere</h2>
     </div>
-    <div class="parent-container">
       <div class="video-container">
       <div id="results-carousel2s" class="carousel results-carousel">
 
@@ -344,7 +409,6 @@
         </div>
 
       </div>
-      </div>
     </div>
   </div>
 </section>
@@ -352,17 +416,11 @@
  <section class="hero teaser">
   <div class="hero-body">
     <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">Reflective Cylinders</h2>
+      <h2 class="title is-3" style="margin-top: 0px; margin-bottom: 0px;">Reflective Cylinders</h2>
     </div>
-    <div class="parent-container">
       <div class="video-container">
       <div id="results-carousel3" class="carousel results-carousel">
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_fishes_prompt_2_an_oil_painting_of_boots_prompt_3_an_oil_painting_of_underwater.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
+
         <div class="item item-mask">
           <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_a_forest_prompt_2_an_oil_painting_of_a_zebra_prompt_3_an_oil_painting_of_a_campfire.mp4"
@@ -375,9 +433,16 @@
                     type="video/mp4">
           </video>
         </div>
+        
         <div class="item item-mask">
           <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
             <source src="./static/videos/2views_with_text/an_oil_painting_of_a_campfire_an_oil_painting_of_flower-11-02_20-59-05_real_inf_text_1999.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="./static/videos/ours_cylinder_and_mirror_text/prompt_1_an_oil_painting_of_fishes_prompt_2_an_oil_painting_of_boots_prompt_3_an_oil_painting_of_underwater.mp4"
                     type="video/mp4">
           </video>
         </div>
@@ -436,7 +501,6 @@
 
 
       </div>
-      </div>
     </div>
   </div>
 </section>
@@ -445,9 +509,8 @@
 <section class="hero teaser">
   <div class="hero-body">
     <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">Reflective Mirrors</h2>
+      <h2 class="title is-3" style="margin-top: 0px; margin-bottom: 0px;">Reflective Mirrors </h2>
     </div>
-    <div class="parent-container">
       <div class="video-container">
       <div id="results-carousel4" class="carousel results-carousel">
         <div class="item item-shiba">
@@ -526,7 +589,6 @@
 
 
       </div>
-      </div>
     </div>
   </div>
 </section>
@@ -537,7 +599,7 @@
 </section>
 
 
-<section id="3D" class="hero teaser">
+<!-- <section id="3D" class="hero teaser">
   <div class="hero-body">
     <div class="columns is-centered has-text-centered">
       <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">3D Shape Illusion
@@ -596,7 +658,7 @@
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="section">
@@ -623,7 +685,7 @@
     <!-- Method -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Overview</h2>
+        <h2 class="title is-3">Overview <a href="#top">&uarr; <span style="font-size: 15px;">back to top</span></a></h2>
         <div class="content has-text-justified">
 
           <p>
