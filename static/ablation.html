@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+        
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <title>Illusion3D: 3D Multiview Illusion with 2D Diffusion Priors</title> -->
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <!-- Google tag (gtag.js) -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-KVVTCMYELC"></script> -->
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-KVVTCMYELC');
+  </script>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/bulma.min.css">
+  <link rel="stylesheet" href="./css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="icon" href="./images/real_inf_0_6000.png">
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./js/fontawesome.all.min.js"></script>
+  <script src="./js/bulma-carousel.min.js"></script>
+  <script src="./js/bulma-slider.min.js"></script>
+  <script src="./js/index.js"></script>
+  <style>
+    h2.title.is-3 {
+  margin-top: 10px; /* Adjust as needed */
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+    .parent-container {
+      display: flex;
+      justify-content: center; /* Center horizontally */
+      align-items: center; /* Center vertically */
+      height: 50vh; /* Full viewport height */
+      margin: 0; /* Remove any default margin */
+      padding: 0; /* Remove any default padding */
+    }
+    .video-container {
+      width: 100%;
+      max-width: 1800px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+
+
+<section id="top" class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- <span class="link-block">
+                <a href="./static/paper/compressed_Illusion3D__3D_multiview_illusion_with_2D_diffusion_priors_Arxiv__CVPR_ (1).pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+               -->
+
+               <!-- <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>   -->
+              <!-- Code Link. -->
+              <!-- <span class="link-block">
+                <a href="https://3d-multiview-illusion.github.io/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span> -->
+
+              <!-- <span class="link-block">
+                <a href="../index.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Main</span>
+                </a>
+              </span> -->
+                        <!-- LINK TO MAIN PAGE -->
+            <div class="column has-text-centered" style="padding-bottom: 0px;">
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="../index.html"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                        <i class="fas fa-arrow-left"></i>
+                    </span>
+                    <span>Back to Main Page</span>
+                    </a>
+                </span>
+              </div>
+            </div>
+              <!-- <span class="link-block">
+                <a href="./ablation.html"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Ablation</span>
+                </a>
+              </span>
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <h2 class="subtitle has-text-centered">
+       We compare our method with different methods by removing each design component and showcase 8-view training results on cube.
+    </h2>
+
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered" style="width: 10%;"></div>
+      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">Comparison with different methods</h2>
+    </div>
+    <div class="hero-body">
+      <div class="grid-container">
+        <div class="grid-item"></div> <!-- Blank placeholder -->
+        <div class="grid-item">
+          <p class="caption">Burgert <i>et al. </i> [1]</p>
+          <video id="teaser1" autoplay muted loop playsinline>
+            <source src="./videos/ablation/compressed_elephant/512_baseline.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="grid-item">
+          <p class="caption">Baseline</p>
+          <video id="teaser2" autoplay muted loop playsinline>
+            <source src="./videos/ablation/compressed_elephant/512_dream_target_loss.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="grid-item">
+          <p class="caption">Random Patch</p>
+          <video id="teaser3" autoplay muted loop playsinline>
+            <source src="./videos/ablation/compressed_elephant/random_patch.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="grid-item">
+          <p class="caption"><i>w/o</i> resolution scaling</p>
+          <video id="teaser4" autoplay muted loop playsinline>
+            <source src="./videos/ablation/compressed_elephant/no_multirender_regular_camera_shift.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="grid-item">
+          <p class="caption"><i>w/o</i> resolution scaling</p>
+          <video id="teaser5" autoplay muted loop playsinline>
+            <source src="./videos/ablation/compressed_elephant/no_multirender_scheduled_camera_shift.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="grid-item">
+          <p class="caption"><i>w/o</i> camera jitter</p>
+          <video id="teaser6" autoplay muted loop playsinline>
+            <source src="./videos/ablation/compressed_elephant/multirender_without_camera_shift.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="grid-item">
+          <p class="caption">Ours</p>
+          <video id="teaser7" autoplay muted loop playsinline>
+            <source src="./videos/ablation/compressed_elephant/ours_prompt_1_a_watercolor_painting_of_an_elephant_prompt_2_a_watercolor_painting_of_Abraham_Lincoln_prompt_3_a_watercolor_painting_of_a_houseplant_cube.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered" style="width: 10%;"></div>
+    </div>
+    <div class="hero-body">
+      <div class="grid-container">
+        <div class="grid-item"></div> <!-- Blank placeholder -->
+        
+        <div class="grid-item">
+          <p class="caption">Burgert <i>et al.</i> [1]</p>
+          <video id="teaser1" autoplay muted loop playsinline>
+            <source src="./videos/ablation/compressed_woman/512_baseline.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="grid-item">
+          <p class="caption">Baseline</p>
+          <video id="teaser2" autoplay muted loop playsinline>
+            <source src="./videos/ablation/compressed_woman/512_dream_target_loss.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="grid-item">
+          <p class="caption">Random Patch</p>
+          <video id="teaser3" autoplay muted loop playsinline>
+            <source src="./videos/ablation/compressed_woman/random_patch.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="grid-item">
+          <p class="caption"><i>w/o</i> resolution scaling</p>
+          <video id="teaser4" autoplay muted loop playsinline>
+            <source src="./videos/ablation/compressed_woman/no_multirender_regular_camera_shift.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="grid-item">
+          <p class="caption"><i>w/o</i> resolution scaling</p>
+          <video id="teaser5" autoplay muted loop playsinline>
+            <source src="./videos/ablation/compressed_woman/no_multirender_scheduled_camera_shift.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="grid-item">
+          <p class="caption"><i>w/o</i> camera jitter</p>
+          <video id="teaser6" autoplay muted loop playsinline>
+            <source src="./videos/ablation/compressed_woman/multirender_without_camera_shift.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="grid-item">
+          <p class="caption">Ours</p>
+          <video id="teaser7" autoplay muted loop playsinline>
+            <source src="./videos/ablation/compressed_woman/ours_prompt_1_a_painting_of_a_woman_staring_out_a_window_prompt_2_a_painting_of_a_horse_prompt_3_a_painting_of_a_forest.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered" style="width: 100%;"></div>
+      <h2 class="title is-3" style="margin-top: 0px; margin-bottom: 60px;">Comparison Table</h2>
+    </div>
+    <div class="hero-body">
+      <div class="table-container">
+        <table class="table is-striped is-bordered no-background">
+          <thead>
+            <tr>
+              <th class="left-align">Camera jitter</th>
+              <th style="color: red;">&times;</th>
+              <th style="color: red;">&times;</th>
+              <th style="color: red;">&times;</th>
+              <th>random</th>
+              <th>scheduled</th>
+              <th style="color: red;">&times;</th>
+              <th>scheduled</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="left-align">Patch denoising</th>
+              <td style="color: red;">&times;</td>
+              <td style="color: red;">&times;</td>
+              <td style="color: green;">&#10003;</td>
+              <td style="color: green;">&#10003;</td>
+              <td style="color: green;">&#10003;</td>
+              <td style="color: green;">&#10003;</td>
+              <td style="color: green;">&#10003;</td>
+            </tr>
+            <tr>
+              <th class="left-align">Resolution scaling</th>
+              <td style="color: red;">&times;</td>
+              <td style="color: red;">&times;</td>
+              <td style="color: red;">&times;</td>
+              <td style="color: red;">&times;</td>
+              <td style="color: red;">&times;</td>
+              <td style="color: green;">&#10003;</td>
+              <td style="color: green;">&#10003;</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">More Views
+        <span style="font-size: 20px;">
+      </h2>
+
+    </div>
+
+      <div class="container is-max-desktop">
+        <h2 class="subtitle has-text-centered">
+          8 views of 8 corners, each face is shared with 4 prompts. (random selected prompts)
+        </h2>   
+      </div>
+
+      <div class="parent-container">
+        <div class="video-container">
+      <div id="results-carousel" class="carousel results-carousel">
+
+
+        <div class="item item-fullbody">
+          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+            <source src="../static/videos/ablation/8prompts/out/compressed/an_oil_painting_of_a_cup_an_oil_painting_of_a_museum-11-19_21-55-12_cube_real_inf_text_1999.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-blueshirt">
+          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+            <source src="../static/videos/ablation/8prompts/out/compressed/a_painting_of_a_young_lady_a_painting_of_a_snowy_mountain_village-11-19_21-55-12_cube_real_inf_text_1999.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-shiba">
+          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+            <source src="../static/videos/ablation/8prompts/out/compressed/a_watercolor_painting_of_a_houseplant_a_watercolor_painting_of_a_helicopter-11-19_21-55-12_cube_real_inf_text_1999.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="../static/videos/ablation/8prompts/out/compressed/a_watercolor_painting_of_a_bus_a_watercolor_painting_of_a_bonfire-11-19_21-55-12_cube_real_inf_text_1999.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="../static/videos/ablation/8prompts/out/compressed/a_watercolor_painting_of_a_cloud_a_watercolor_painting_of_a_motorcycle-11-18_21-51-35_cube_real_inf_text_1999.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="../static/videos/ablation/8prompts/out/compressed/an_oil_painting_of_a_marimba_an_oil_painting_of_Elvis-11-19_21-55-12_cube_real_inf_text_1999.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+            <source src="../static/videos/ablation/8prompts/out/compressed/a_watercolor_painting_of_a_bus_a_watercolor_painting_of_students_in_a_classroom-11-19_21-26-19_cube_real_inf_text_1999.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+
+      </div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop" style="width: 33%;">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-1" style="margin-top: 50px; margin-bottom: 60px;">Failure Cases</Object></h2>
+    </div>
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3" style="margin-top: 50px; margin-bottom: 60px;">Duplicate Objects</Object></h2>
+    </div>
+    <div class="hero-body" style="display: flex; justify-content: center; align-items: center;">
+      <video id="teaser1" autoplay muted loop playsinline height="100%">
+        <source src="./videos/failures/duplicate_objects/prompt_1_a_mosaic_of_a_woman_staring_out_a_window_prompt_2_a_mosaic_of_students_in_a_classroom_prompt_3_a_mosaic_of_a_monkey_cube.mp4"
+                type="video/mp4">
+      </video>
+      <video id="teaser1" autoplay muted loop playsinline height="100%">
+        <source src="./videos/failures/duplicate_objects/prompt_1_a_painting_of_a_young_lady_prompt_2_a_painting_of_a_snowy_mountain_village_prompt_3_a_painting_of_a_train_cube.mp4"
+                type="video/mp4">
+      </video>
+      <video id="teaser1" autoplay muted loop playsinline height="100%">
+        <source src="./videos/failures/duplicate_objects/prompt_1_a_lithograph_of_flowers_prompt_2_a_lithograph_of_a_campfire_prompt_3_a_lithograph_of_Michael_Jackson.mp4"
+                type="video/mp4">
+      </video>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop" style="width: 33%;">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;">Blending objects
+      </h2>
+    </div>
+    <div class="hero-body" style="display: flex; justify-content: center; align-items: center;">
+      <video id="teaser1" autoplay muted loop playsinline height="100%">
+        <source src="./videos/failures/blending_objects/prompt_1_an_oil_painting_of_an_octopus_prompt_2_an_oil_painting_of_a_turkey_prompt_3_an_oil_painting_of_a_frog_cube.mp4"
+                type="video/mp4">
+      </video>
+      <video id="teaser1" autoplay muted loop playsinline height="100%">
+        <source src="./videos/failures/blending_objects/prompt_1_a_lithograph_of_a_rabbit_prompt_2_a_lithograph_of_a_violin_prompt_3_a_lithograph_of_wine_and_cheese_cube.mp4"
+                type="video/mp4">
+      </video>
+      <video id="teaser1" autoplay muted loop playsinline height="100%">
+        <source src="./videos/failures/blending_objects/prompt_1_a_lithograph_of_a_rabbit_prompt_2_a_lithograph_of_a_violin_prompt_3_a_lithograph_of_wine_and_cheese.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop" style="width: 33%;">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;"> Less natural objects
+      </h2>
+    </div>
+    <div class="hero-body" style="display: flex; justify-content: center; align-items: center;">
+      <video id="teaser1" autoplay muted loop playsinline height="100%">
+        <source src="./videos/failures/less_natural_object/prompt_1_a_painting_of_a_woman_prompt_2_a_painting_of_a_mouse_prompt_3_a_painting_of_an_old_woman.mp4"
+                type="video/mp4">
+      </video>
+      <video id="teaser1" autoplay muted loop playsinline height="100%">
+        <source src="./videos/failures/less_natural_object/prompt_1_a_painting_of_a_woman_staring_out_a_window_prompt_2_a_painting_of_a_horse_prompt_3_a_painting_of_a_forest.mp4"
+                type="video/mp4">
+      </video>
+      <video id="teaser1" autoplay muted loop playsinline height="100%">
+        <source src="./videos/failures/less_natural_object/prompt_1_a_mosaic_of_a_woman_staring_out_a_window_prompt_2_a_mosaic_of_students_in_a_classroom_prompt_3_a_mosaic_of_a_monkey.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop" style="width: 33%;">
+    <div class="columns is-centered has-text-centered">
+      <h2 class="title is-3" style="margin-top: 60px; margin-bottom: 60px;"> Easy to recognize face, <br> human nature
+        <span style="font-size: 20px;"><a href="#top">&uarr; <span style="font-size: 15px;">back to top</span></a></span>
+      </h2>
+    </div>
+    <div class="hero-body" style="display: flex; justify-content: center; align-items: center;">
+      <video id="teaser1" autoplay muted loop playsinline height="100%">
+        <source src="./videos/failures/easy_to_recognize_face/prompt_1_an_oil_painting_of_a_forest_prompt_2_an_oil_painting_of_a_zebra_prompt_3_an_oil_painting_of_a_campfire.mp4"
+                type="video/mp4">
+      </video>
+      <video id="teaser1" autoplay muted loop playsinline height="100%">
+        <source src="./videos/failures/easy_to_recognize_face/prompt_1_a_watercolor_painting_of_a_motorcycle_prompt_2_a_watercolor_painting_of_Marylin_Monroe_prompt_3_a_watercolor_painting_of_a_still_life_of_trophies_and_awards.mp4"
+                type="video/mp4">
+      </video>
+      <video id="teaser1" autoplay muted loop playsinline height="100%">
+        <source src="./videos/failures/easy_to_recognize_face/prompt_1_an_oil_painting_of_a_kangaroo_prompt_2_a_lithograph_of_a_soldier_prompt_3_a_lithograph_of_people_at_a_campfire.mp4"
+                type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+  <section class="section" id="related_works">
+    <div class="container ">
+      <div class="columns is-centered has-text-centered">
+        <h2 class="title is-3">References</h2>
+      </div>
+      <p>
+        <small>[1] Ryan Burgert, Xiang Li, Abe Leite, Kanchana Ranasinghe, and Michael Ryoo. Diffusion illusions: Hiding images in plain sight. In ACM SIGGRAPH 2024 Conference Papers, pages 1–11, 2024. 2, 3, 6, 8</small>
+      </p>
+    </div>
+  </section>
+  
+  
+
