@@ -12,7 +12,7 @@ def compress_videos(input_folder, crf):
             input_path = os.path.join(input_folder, filename)
             output_path = os.path.join(output_folder, filename)
             compress_video(input_path, output_path, crf)
-
+# 
 def compress_video(input_path, output_path, crf):
     command = [
         'ffmpeg',
