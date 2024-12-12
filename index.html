@@ -93,6 +93,22 @@
     .subtitle.has-text-centered {
       margin-top: 20px; /* Adjust the value as needed */
     }
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+      background: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
         
   </style>
 
@@ -157,7 +173,7 @@
                   <span class="icon">
                       <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Code (coming soon) </span>
                   </a>
               </span>
               <span class="link-block">
@@ -188,22 +204,25 @@
   </div>
 </section>
 
-<section class="section" id="sec:youtube-embed">
+<section class="section" id="sec:youtube-embed" style="margin-bottom: 20px;">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column">
-        <iframe  id="div-container-embed-video" width="100%" height="500"
-          src="https://www.youtube.com/embed/-oCyeeDd1XY?si=Ra6reyroYWhvX79F">
-        </iframe>
+        <div class="video-wrapper">
+          <iframe id="div-container-embed-video" width="100%" height="100%"
+            src="https://www.youtube.com/embed/-oCyeeDd1XY?si=Ra6reyroYWhvX79F" frameborder="0" allowfullscreen>
+          </iframe>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
+
 <section id="real" class="hero teaser">
   <div class="hero-body">
     <div class="columns is-centered has-text-centered">
-      <h2 class="title is-3" style="margin-top: 0px; margin-bottom: 20px;">Real Examples</h2>
+      <h2 class="title is-3" style="margin-top: 10px; margin-bottom: 20px;">Real Examples</h2>
     </div>
     
     <!-- <div class="container"> -->
