@@ -121,7 +121,9 @@
         .bold {
             font-weight: bold; /* Bold styling for the highlighted part */
         }
-        
+        .left-aligned {
+    text-align: left;
+  }
   </style>
 
 </head>
@@ -727,13 +729,14 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Automatically generating multiview illusions is a compelling challenge, where a single piece of visual content can present distinct interpretations from various perspectives.
-            Existing methods like shadow art and wire art create interesting 3D illusions but are limited to simple images (\ie, figure-ground or line drawing), restricting their expressiveness in artistic and practical applications. 
-            Diffusion-based illusion generation methods can generate more intricate designs but are confined to 2D images.
-            In this work, we present a simple approach for creating 3D multiview illusions guided by user-provided text prompts or images.
-            Our method leverages a pre-trained text-to-image diffusion model to optimize the textures of various 3D shapes through differentiable rendering, producing different interpretations when viewed from multiple angles.
-            We develop several techniques that improve the quality of the 3D multiview illusions. Our approach expands the scope of multiview illusion by leveraging the power of diffusion models to generate detailed 3D illusions. 
-            We demonstrate the effectiveness of our approach through various examples and 3D forms and validate the effectiveness of our design choices. 
+            Automatically generating multiview illusions is a compelling challenge, where a single piece of visual content offers distinct interpretations from different viewing perspectives.
+            Traditional methods, such as shadow art and wire art, create interesting 3D illusions but are limited to simple visual outputs (i.e., figure-ground or line drawing), restricting their artistic expressiveness and practical versatility. 
+            Recent diffusion-based illusion generation methods can generate more intricate designs but are confined to 2D images.
+            In this work, we present a simple yet effective approach for creating 3D multiview illusions based on user-provided text prompts or images.
+            Our method leverages a pre-trained text-to-image diffusion model to optimize the textures and geometry of neural 3D representations through differentiable rendering. 
+            When viewed from multiple angles, this produces different interpretations.
+            We develop several techniques to improve the quality of the generated 3D multiview illusions. 
+            We demonstrate the effectiveness of our approach through extensive experiments and showcase illusion generation with diverse 3D forms.
           </p>
         </div>
       </div>
@@ -779,7 +782,7 @@
 </section>
 
 <section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
+  <div class="container is-max-desktop content left-aligned">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{feng2024illusion3d3dmultiviewillusion,
                 title={Illusion3D: 3D Multiview Illusion with 2D Diffusion Priors}, 
