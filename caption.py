@@ -118,9 +118,9 @@ def extract_prompts(file_name):
     return prompt_1, prompt_2, prompt_3
 if __name__ == "__main__":
     # Set input and output file paths
-    input_folder = "/Users/fengyue/Documents/GitHub/3D-multiview-illusion.github.io/static/videos/2views"
+    input_folder = "/Users/fengyue/Documents/GitHub/3D-multiview-illusion.github.io/static/videos/beanbag_captioned/00"
     # output_folder = "out"
-    output_folder = "/Users/fengyue/Documents/GitHub/3D-multiview-illusion.github.io/static/videos/2views_captioned"
+    output_folder = "/Users/fengyue/Documents/GitHub/3D-multiview-illusion.github.io/static/videos/beanbag_captioned"
     # find file name inclues "elephant" in the folder using glob    
     # file_names = [f for f in os.listdir(input_folder) if "512" in f]
     # glob all files in the folder
